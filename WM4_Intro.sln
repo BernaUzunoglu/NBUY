@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KararYapilariVeDonguler", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gün2", "Gün2", "{B0076EEE-B059-4DC9-8A71-195DB9A4B78C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InputIslemleri", "InputIslemleri\InputIslemleri.csproj", "{0625F0B6-94C2-4DDF-993E-32FFCE2449B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InputIslemleri", "InputIslemleri\InputIslemleri.csproj", "{0625F0B6-94C2-4DDF-993E-32FFCE2449B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomNesnesi", "RandomNesnesi\RandomNesnesi.csproj", "{BFCD9AF9-C69D-42C0-B388-3DAC7D0E11EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomNesnesi", "RandomNesnesi\RandomNesnesi.csproj", "{BFCD9AF9-C69D-42C0-B388-3DAC7D0E11EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SekilCizme", "SekilCizme\SekilCizme.csproj", "{EB66FC08-38AB-4EF7-9055-939404063CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SekilCizme", "SekilCizme\SekilCizme.csproj", "{EB66FC08-38AB-4EF7-9055-939404063CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BOM_Game", "BOM_Game\BOM_Game.csproj", "{9556F78E-8387-45D2-9AEB-9FE5A572676E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{EB66FC08-38AB-4EF7-9055-939404063CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB66FC08-38AB-4EF7-9055-939404063CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB66FC08-38AB-4EF7-9055-939404063CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9556F78E-8387-45D2-9AEB-9FE5A572676E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9556F78E-8387-45D2-9AEB-9FE5A572676E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9556F78E-8387-45D2-9AEB-9FE5A572676E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9556F78E-8387-45D2-9AEB-9FE5A572676E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{0625F0B6-94C2-4DDF-993E-32FFCE2449B7} = {B0076EEE-B059-4DC9-8A71-195DB9A4B78C}
 		{BFCD9AF9-C69D-42C0-B388-3DAC7D0E11EB} = {B0076EEE-B059-4DC9-8A71-195DB9A4B78C}
 		{EB66FC08-38AB-4EF7-9055-939404063CF2} = {B0076EEE-B059-4DC9-8A71-195DB9A4B78C}
+		{9556F78E-8387-45D2-9AEB-9FE5A572676E} = {B0076EEE-B059-4DC9-8A71-195DB9A4B78C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1AB4EDC3-6721-4BA7-8C33-9CF35518AC83}
