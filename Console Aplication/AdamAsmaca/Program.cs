@@ -89,6 +89,33 @@ namespace AdamAsmaca
                 if (info.Key != ConsoleKey.E)
                     break;
             } while (true);
+
+            /*
+             * string ifadelerden Contains ve Indexof ile kelime içerisinde harf bulma yöntemi
+             * 
+             for (int k = 0; k < bosDizi.Length; k++)
+                        {
+                            Console.WriteLine("\n Tahmin ettiğiniz harf i girin  :  ");
+                            string tahminKarekteri = Console.ReadLine();
+                            bool tahminDurumu = oyunKelimesi.Contains(tahminKarekteri.ToUpper());
+                            if (tahminDurumu == true)
+                            {
+                                int index = oyunKelimesi.IndexOf(tahminKarekteri.ToUpper());
+                                bosDizi[index] = tahminKarekteri;
+                                foreach (var item in bosDizi)
+                                {
+                                    Console.Write(item);
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("\n Yanlış tahmin ettiniz");
+                                maxPuan = maxPuan - (maxPuan * 15 / 100);
+                                //break;
+                            }
+             */
+
+
         }
     }
 }

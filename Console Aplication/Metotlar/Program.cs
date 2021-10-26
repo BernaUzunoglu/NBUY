@@ -19,6 +19,13 @@ namespace Metotlar
             alan = AlanHesapla(3,4);
             alan = AlanHesapla(3d);
             alan = AlanHesapla(3d,3.14);
+            int sonuc = Topla(3,5);
+            //int sonuc1 = Topla((Topla(3,5), 5),Topla(9,7));
+
+            int[] sayilar = { 3, 5, 6, 4, 6, 5, 8, 9 };
+            sonuc = Topla(new[] { 3, 5, 6, 4, 6, 5, 8, 9 },1);
+            sonuc = Topla(sayilar,1);
+            sonuc = Topla(3, 5, 6, 4, 6, 5, 8, 9);
         }
         
          
@@ -52,6 +59,32 @@ namespace Metotlar
         static double AlanHesapla(double r,double pi=Math.PI)//Opsiyonel parametre ve bu parameterler hep sonda yazılır
         {
             return r * r * pi;
+        }
+
+        static int Topla(int a,int b)
+        {
+            return a + b;
+        }
+
+        static int Topla(int[] sayilar , int yuvarlama )
+        {
+            int sonuc = 0;
+            foreach (int sayi in sayilar)
+            {
+                sonuc += sayi;
+            }
+            return sonuc;
+        }
+
+        // params olarak kullanıldığı zaman new[] {} şeklinde , dizi ismi ile ve sonsuz parametre olarak kullanımını sağlıyor.Topla(params int[] sayilari int yuvarlama ) şeklinde tanımlanınca , , , şeklinde girdi alabildiği için diğer parametrenin ayrımını yapamıyor.
+        static int Topla(double yuvarlama ,params int[] sayilar)
+        {
+            int sonuc = 0;
+            foreach (int sayi in sayilar)
+            {
+                sonuc += sayi;
+            }
+            return sonuc;
         }
     }
 }

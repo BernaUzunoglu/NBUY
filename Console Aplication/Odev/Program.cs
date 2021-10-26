@@ -6,85 +6,11 @@ namespace Odev
     {
         static void Main(string[] args)
         {
-            // ----------Oyun 1 ---------------
             Random rnd = new Random();
-
-            do
-            {
-                int rasgeleSayi = rnd.Next(100);
-                while (true)
-                {
-                    Console.WriteLine("Lütfen 1 - 100 arasındaki tahmini değerinizi giriniz");
-                    try
-                    {
-                        int tahminDeger = Convert.ToInt32(Console.ReadLine());
-                        if (tahminDeger < 1 || tahminDeger > 100)
-                            throw new Exception("1 - 100 arası bir sayı girmediniz");
-                        //break;
-
-                        if (tahminDeger < rasgeleSayi)
-                            Console.WriteLine("Yukarı");
-                        else if (tahminDeger > rasgeleSayi)
-                            Console.WriteLine("Aşağı");
-                        else
-                        {
-                            Console.WriteLine("Dogru Tahmin");
-                            break;
-                        }
-                    }
-                    catch (FormatException ex)
-                    {
-                        Console.WriteLine("Lütfen sayısal bir değer giriniz");
-                    }
-                }
-                Console.WriteLine("Tekrar oynamak içi E tuşuna basınız");
-                ConsoleKeyInfo info = Console.ReadKey();
-                if (info.Key != ConsoleKey.E)
-                    break;
-
-            } while (true);
-
-            // ----------- Oyun 2 -------
-
-            Console.WriteLine("Lütfen 1 - 6 arasındaki zar değerinizi giriniz");
-            try
-            {
-                int zarDegeri = Convert.ToInt32(Console.ReadLine());
-                if (zarDegeri < 1 || zarDegeri > 6)
-                    //throw new Exception("1 - 6 arası bir sayı girmediniz");
-                    Console.WriteLine("1 - 6 arası bir sayı girmediniz");
-                //break;
-
-                int sayac = 1;
-                while (true)
-                {
-                    int a = rnd.Next(1, 7);
-                    int b = rnd.Next(1, 7);
-                    if (zarDegeri == a && zarDegeri == b)
-                    {
-                        Console.WriteLine("Girilen Zar değeri {0} :{0} gelme iterasyon saysı {1} ", zarDegeri, sayac);
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Gelen zar değerleri {0}:{1} ve iterasyon sayısı : {2}", a, b, sayac);
-                        sayac++;
-                    }
-                }
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine("Lütfen sayısal bir değer giriniz");
-            }
-
-
-
 
             ///----------- Oyun 3 ----------
             ///
             string[] kelimeListesi = { "ELMA", "BERNA", "KANEPE", "TABAK", "KULAKLIK", "BİLGİSAYAR", "YAZILIM", "MÜHENDİS", "HAFIZA" };
-            //string[] kelimeListesi = { "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", "ELMA", };
-
 
             do
             {
@@ -121,7 +47,6 @@ namespace Odev
                                 {
                                     Console.Write(item);
                                 }
-
                             }
                             else
                             {
@@ -130,15 +55,11 @@ namespace Odev
                                 //break;
                             }
 
-
                         }
                         //Console.WriteLine("Kelimeyi doğru tahmin ettiniz");
                         //Console.WriteLine("Kazanılan toplam puan : {0} ", maxPuan);
                         break;
                         
-
-
-
                     }
                     else if (info.Key == ConsoleKey.K)
                     {
