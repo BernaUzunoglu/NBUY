@@ -40,7 +40,7 @@ namespace BOM_Game
                                     dogruMu = true;
                                 }
                                 
-                                else if(i % kuralSayisi == 0 &&(i == Convert.ToInt32(deger) || i != Convert.ToInt32(deger)) )
+                                else if(i % kuralSayisi == 0 &&(i == Convert.ToInt32(deger) || i != Convert.ToInt32(deger))&&i != Convert.ToInt32(deger))
                                 { Console.WriteLine("KAYBETTİNİZ"); oyunBitti = true; }
 
                                 else if (i % kuralSayisi == 0 && deger.ToUpper() != "BOM")
