@@ -24,8 +24,11 @@ namespace Metotlar
 
             int[] sayilar = { 3, 5, 6, 4, 6, 5, 8, 9 };
             sonuc = Topla(new[] { 3, 5, 6, 4, 6, 5, 8, 9 },1);
+            Console.WriteLine(sonuc);
             sonuc = Topla(sayilar,1);
+            Console.WriteLine(sonuc);
             sonuc = Topla(3, 5, 6, 4, 6, 5, 8, 9);
+            Console.WriteLine(sonuc);
         }
         
          
