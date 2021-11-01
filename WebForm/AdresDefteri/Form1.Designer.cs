@@ -39,6 +39,8 @@ namespace AdresDefteri
             this.dtpDog_tar = new System.Windows.Forms.DateTimePicker();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.lstbxKisiler = new System.Windows.Forms.ListBox();
+            this.btnGncl = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +109,7 @@ namespace AdresDefteri
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(221, 236);
+            this.btnKaydet.Location = new System.Drawing.Point(60, 252);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(110, 31);
             this.btnKaydet.TabIndex = 8;
@@ -124,12 +126,35 @@ namespace AdresDefteri
             this.lstbxKisiler.Name = "lstbxKisiler";
             this.lstbxKisiler.Size = new System.Drawing.Size(256, 379);
             this.lstbxKisiler.TabIndex = 9;
+            this.lstbxKisiler.SelectedIndexChanged += new System.EventHandler(this.lstbxKisiler_SelectedIndexChanged);
+            // 
+            // btnGncl
+            // 
+            this.btnGncl.Location = new System.Drawing.Point(187, 253);
+            this.btnGncl.Name = "btnGncl";
+            this.btnGncl.Size = new System.Drawing.Size(110, 30);
+            this.btnGncl.TabIndex = 10;
+            this.btnGncl.Text = "Güncelle";
+            this.btnGncl.UseVisualStyleBackColor = true;
+            this.btnGncl.Click += new System.EventHandler(this.btnGncl_Click);
+            // 
+            // btnSil
+            // 
+            this.btnSil.Location = new System.Drawing.Point(321, 252);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(99, 31);
+            this.btnSil.TabIndex = 11;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSil);
+            this.Controls.Add(this.btnGncl);
             this.Controls.Add(this.lstbxKisiler);
             this.Controls.Add(this.btnKaydet);
             this.Controls.Add(this.dtpDog_tar);
@@ -160,6 +185,8 @@ namespace AdresDefteri
         private System.Windows.Forms.DateTimePicker dtpDog_tar;
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.ListBox lstbxKisiler;
+        private System.Windows.Forms.Button btnGncl;
+        private System.Windows.Forms.Button btnSil;
     }
 }
 

@@ -23,5 +23,9 @@ namespace Kalitim_V1
             //return X + Y + base.KosegenHesapla();
             return base.CevreHesapla() / 2 + base.KosegenHesapla();
         }
+        public override string ToString()
+        {
+            return "Dİk Üçgenin : " + AlanHesapla() + "br²";
+        }
     }
 }

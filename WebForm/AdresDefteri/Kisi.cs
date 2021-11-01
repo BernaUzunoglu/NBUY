@@ -130,7 +130,7 @@ namespace AdresDefteri
 
         public DateTime OlusturulmaZamanı { get; private set; } //Dışardan setlenemez içerden setlenir.
 
-        public override string ToString()
+        public override string ToString() // Listboxda değerleri yazdırmak için to string metodunu override yaptık.
         {
             return $"{this.Ad} {this.Soyad} - {this.Yas}";
                 

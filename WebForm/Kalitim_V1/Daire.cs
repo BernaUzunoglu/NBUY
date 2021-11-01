@@ -29,6 +29,15 @@ namespace Kalitim_V1
         {
             return 2* X;
         }
-        
+
+        public double Cap()
+        {
+            return 2 * X;
+        }
+        public override string ToString()
+        {
+            return "Daire : " + Math.Round(AlanHesapla(),2) + "br²";
+        }
+
     }
 }

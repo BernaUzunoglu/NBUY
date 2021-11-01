@@ -37,6 +37,10 @@ namespace Kalitim_V1
         {
             return Math.Sqrt(Math.Pow(X, 2) + Math.Pow(Y, 2));
         }
+        public override string ToString()
+        {
+            return "Dikdörtgenin " + AlanHesapla() + "br²";
+        }
 
     }
 }
