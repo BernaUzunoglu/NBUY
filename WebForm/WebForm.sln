@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdresDefteri", "AdresDefter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdresDefteri.Models", "AdresDefteri.Models\AdresDefteri.Models.csproj", "{CEE1A219-2E84-4F58-AAD1-071842B8B8E4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun6", "Gun6", "{0CCB5BE2-AFB7-409D-A039-31D807123BEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kalitim_V1", "Kalitim_V1\Kalitim_V1.csproj", "{80DBDAAD-3853-403F-904E-420FF15C8885}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{CEE1A219-2E84-4F58-AAD1-071842B8B8E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEE1A219-2E84-4F58-AAD1-071842B8B8E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEE1A219-2E84-4F58-AAD1-071842B8B8E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80DBDAAD-3853-403F-904E-420FF15C8885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80DBDAAD-3853-403F-904E-420FF15C8885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80DBDAAD-3853-403F-904E-420FF15C8885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80DBDAAD-3853-403F-904E-420FF15C8885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{16C64CB9-7522-4242-A423-8CA5FD2A0A06} = {64F495A6-80F5-431A-B792-8986AD9974BE}
 		{CEE1A219-2E84-4F58-AAD1-071842B8B8E4} = {64F495A6-80F5-431A-B792-8986AD9974BE}
+		{80DBDAAD-3853-403F-904E-420FF15C8885} = {0CCB5BE2-AFB7-409D-A039-31D807123BEF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30FFFCAE-1DDD-41DA-862E-590FB9146AC7}
