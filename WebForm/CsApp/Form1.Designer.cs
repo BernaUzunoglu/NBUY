@@ -125,6 +125,7 @@ namespace CsApp
             this.btnFirlat.TabIndex = 1;
             this.btnFirlat.Text = "Fırlat";
             this.btnFirlat.UseVisualStyleBackColor = true;
+            this.btnFirlat.Click += new System.EventHandler(this.btnFirlat_Click);
             // 
             // grpbxYakinsaldiri
             // 

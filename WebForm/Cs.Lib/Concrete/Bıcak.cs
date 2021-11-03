@@ -27,9 +27,7 @@ namespace Cs.Lib.Concrete
 
         public override int Vur()
         {
-            //SoundPlayer soundPlayer = new SoundPlayer(Properties.Resources.Bicak_Saplama);
             this._bicakSaplama = Properties.Resources.Bicak_Saplama;
-            //soundPlayer.Play();
             Thread.Sleep(VurusKatsayisi);
             return Hasar;
         }

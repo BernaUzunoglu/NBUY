@@ -73,8 +73,10 @@ namespace CsApp
                     silah = new Awp();
                     break;
                 case Silahlar.ElBombası:
+                    silah = new ElBombasi();
                     break;
                 case Silahlar.FlashBombası:
+                    silah = new FlashBombasi();
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
@@ -115,8 +117,8 @@ namespace CsApp
         private void SilahBilgisiGoster(Silah silah)
         {
             lblDetay.Text = $"Ülke: {silah.Ulke}\nFiyat: {silah.Fiyat:c2}";
-            if (silah is ISarjorlu sarjorSilah)
-                lblDurum.Text = $"{sarjorSilah.KalanFisek}/{sarjorSilah.SarjorKapasitesi}";
+            if (silah is ISarjorlu sarjorluSilahlar)
+                lblDurum.Text = $"{sarjorluSilahlar.KalanFisek}/{sarjorluSilahlar.SarjorKapasitesi}";
         }
 
         private void btnAtesEt_Click(object sender, EventArgs e)
@@ -124,6 +126,7 @@ namespace CsApp
             btnAtesEt.Enabled = false;
             IAtesEdebilen atesliSilah = silah as IAtesEdebilen;
             int sayi = atesliSilah.AtesEt();
+            SilahBilgisiGoster(silah);
             SoundPlayer player;
 
             if (sayi !=0)
@@ -144,6 +147,7 @@ namespace CsApp
         {
             ISarjorlu atesliSilah = silah as ISarjorlu;
             atesliSilah.YenidenDoldur();
+            SilahBilgisiGoster(silah);
             SoundPlayer player = new SoundPlayer(atesliSilah.YenidenDoldurmaSesi);
             atesliSilah.YenidenDoldurmaSesi.Position = 0;
             player.Play();
@@ -173,7 +177,22 @@ namespace CsApp
             btnSaldir.Enabled = true;
             IVurulabilir vurulabilir = silah as IVurulabilir;
             (silah as IVurulabilir).Vur();
+            SilahBilgisiGoster(silah);
             SoundPlayer player = new SoundPlayer(vurulabilir.BicakSaplama);
+            player.Play();
+
+        }
+
+        private void btnFirlat_Click(object sender, EventArgs e)
+        {
+            btnFirlat.Enabled = true;
+            IFirlatilabilen firlat = silah as IFirlatilabilen;
+            //Firlatilan firlatilan = silah as Firlatilan;
+           // firlatilan.Firlat();
+            firlat.Firlat();
+            SilahBilgisiGoster(silah);
+            //SoundPlayer player = new SoundPlayer(firlatilan.Bomba);
+            SoundPlayer player = new SoundPlayer(firlat.Bomba);
             player.Play();
 
         }
