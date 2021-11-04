@@ -21,9 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentMethod.Models", "Pay
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun8", "Gun8", "{EEDFE513-FA22-41D5-8687-B88F69CFBC84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsApp", "CsApp\CsApp.csproj", "{A729516E-C953-4C5A-A29D-40DF375B447E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsApp", "CsApp\CsApp.csproj", "{A729516E-C953-4C5A-A29D-40DF375B447E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cs.Lib", "Cs.Lib\Cs.Lib.csproj", "{62D651F9-C58F-4B2D-BF8A-294B95D2BC5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cs.Lib", "Cs.Lib\Cs.Lib.csproj", "{62D651F9-C58F-4B2D-BF8A-294B95D2BC5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -42,6 +42,7 @@ namespace PaymentMethod
             this.txtCardNumber = new System.Windows.Forms.TextBox();
             this.lstTaksitler = new System.Windows.Forms.ListBox();
             this.btnOdemeYap = new System.Windows.Forms.Button();
+            this.creditCardBox1 = new PaymentMethod.UserControls.CreditCardBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,7 +159,7 @@ namespace PaymentMethod
             // 
             // btnOdemeYap
             // 
-            this.btnOdemeYap.Location = new System.Drawing.Point(494, 253);
+            this.btnOdemeYap.Location = new System.Drawing.Point(671, 384);
             this.btnOdemeYap.Name = "btnOdemeYap";
             this.btnOdemeYap.Size = new System.Drawing.Size(96, 32);
             this.btnOdemeYap.TabIndex = 3;
@@ -166,11 +167,19 @@ namespace PaymentMethod
             this.btnOdemeYap.UseVisualStyleBackColor = true;
             this.btnOdemeYap.Click += new System.EventHandler(this.btnOdemeYap_Click);
             // 
+            // creditCardBox1
+            // 
+            this.creditCardBox1.Location = new System.Drawing.Point(204, 235);
+            this.creditCardBox1.Name = "creditCardBox1";
+            this.creditCardBox1.Size = new System.Drawing.Size(405, 190);
+            this.creditCardBox1.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.creditCardBox1);
             this.Controls.Add(this.btnOdemeYap);
             this.Controls.Add(this.lstTaksitler);
             this.Controls.Add(this.groupBox1);
@@ -199,6 +208,7 @@ namespace PaymentMethod
         private System.Windows.Forms.TextBox txtCardNumber;
         private System.Windows.Forms.ListBox lstTaksitler;
         private System.Windows.Forms.Button btnOdemeYap;
+        private UserControls.CreditCardBox creditCardBox1;
     }
 }
 

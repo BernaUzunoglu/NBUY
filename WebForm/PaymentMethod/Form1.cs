@@ -86,15 +86,29 @@ namespace PaymentMethod
                     payment.Inatallement = taksitler[lstTaksitler.SelectedIndex];
                     payment.CustomerId = "123";
                     payment.Total = sepetTutari;
+                    payment.CardInfo = creditCardBox1.CardInfo; // İçeriği user kontrollerda kart içeriğinin Card sınıfı nesnesini kullanarak dolu getirdik         1. YOL
+
+                    /*
+                     * //// ---Textbox içerisinde ki kart bilgilerinin alma user control olmadan 2 .YOL  -----////
+                     
                     payment.CardInfo = new Card()
                     {
-                        Year = 2021,
-                        CVC = txtCvv.Text,
-                        Mount = 11,
-                        NameSurname = txtAdSoyad.Text,
-                        Number = txtCardNumber.Text
-                    };
-                    paymentManager.Pay(payment);
+                        //Year = 2021,
+                        //CVC = txtCvv.Text,
+                        //Mount = 11,
+                        //NameSurname = txtAdSoyad.Text,
+                        //Number = txtCardNumber.Text
+
+                        /-----///UserControl içerisinde tanladığımız kendi propertilerimize eriştik.---- 3.YOL 
+
+                        Year = int.Parse(creditCardBox1.Yil),
+                        CVC = creditCardBox1.Cvv,
+                        Mount = int.Parse(creditCardBox1.Ay),
+                        NameSurname = creditCardBox1.AdSoyad,
+                        Number = creditCardBox1.KartNo
+
+                    }; */
+                     paymentManager.Pay(payment);
 
                     break;
                 case PaymentMethods.Debit:
