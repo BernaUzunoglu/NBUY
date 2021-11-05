@@ -169,10 +169,14 @@ namespace PaymentMethod
             // 
             // creditCardBox1
             // 
+            this.creditCardBox1.AdSoyad = "";
+            this.creditCardBox1.Cvv = null;
+            this.creditCardBox1.KartNo = "               ";
             this.creditCardBox1.Location = new System.Drawing.Point(204, 235);
             this.creditCardBox1.Name = "creditCardBox1";
             this.creditCardBox1.Size = new System.Drawing.Size(405, 190);
             this.creditCardBox1.TabIndex = 4;
+            this.creditCardBox1.AdSoyadHata += new PaymentMethod.UserControls.AdSoyadHataEvent(this.creditCardBox1_AdSoyadHata);
             // 
             // Form1
             // 

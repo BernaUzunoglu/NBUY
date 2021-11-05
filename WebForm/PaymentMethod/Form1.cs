@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -138,6 +139,16 @@ namespace PaymentMethod
             {
                 MessageBox.Show("Ödemeniz başarı ile yapıldı.");
             }
+        }
+
+        private void creditCardBox1_AdSoyadHata(object sender, KeyPressEventArgs e)
+        {
+            ErrorProvider provider = new ErrorProvider(this);
+            provider.SetError(creditCardBox1, $"Yanlış bir karekter girdiniz : {e.KeyChar}");
+            provider.BlinkStyle = ErrorBlinkStyle.BlinkIfDifferentError;
+            //Thread.Sleep(1000);
+            //provider.Clear();
+            this.Text = $"Yanlış bir karekter girdiniz : {e.KeyChar}";
         }
     }
 }

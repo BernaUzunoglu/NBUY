@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace PaymentMethod.UserControls
 {
+    public delegate void AdSoyadHataEvent(object sender, KeyPressEventArgs e);
     public partial class CreditCardBox : UserControl
     {
         public CreditCardBox()
@@ -63,6 +64,8 @@ namespace PaymentMethod.UserControls
         };
         public string Cvv { get; set; }
 
+        public event AdSoyadHataEvent AdSoyadHata;
+
         private void CreditCardBox_Load(object sender, EventArgs e)
         {
             for (int i = 1; i < 13; i++)
@@ -78,8 +81,12 @@ namespace PaymentMethod.UserControls
 
         private void txtAdSoyad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsDigit(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSeparator(e.KeyChar))
+            if (char.IsDigit(e.KeyChar) || char.IsPunctuation(e.KeyChar) || char.IsSeparator(e.KeyChar)|| char.IsSymbol(e.KeyChar))
+            {
                 e.Handled = true;
+                AdSoyadHata?.Invoke(sender,e);
+            }
+
         }
     }
 }
