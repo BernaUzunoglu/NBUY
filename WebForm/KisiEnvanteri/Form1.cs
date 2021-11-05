@@ -31,6 +31,7 @@ namespace KisiEnvanteri
             {
                 lstbxKisiler.Items.Add(kisi);
             }
+            KisiContext.Save();
 
         }
         MemoryStream resimStream = new MemoryStream();
@@ -52,6 +53,7 @@ namespace KisiEnvanteri
             }
             kisiler.Add(yeniKisi);
             ListeyiDoldur();
+            
 
         }
 
@@ -182,6 +184,13 @@ namespace KisiEnvanteri
                 ListeyiDoldur();
             }
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            KisiContext.Load();
+            this.kisiler = KisiContext.Kisiler;
+            ListeyiDoldur();
         }
     }
 }

@@ -192,33 +192,33 @@ namespace KisiEnvanteri
             // dışarıAKtarToolStripMenuItem
             // 
             this.dışarıAKtarToolStripMenuItem.Name = "dışarıAKtarToolStripMenuItem";
-            this.dışarıAKtarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dışarıAKtarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.dışarıAKtarToolStripMenuItem.Text = "XML Dışarı Aktar";
             this.dışarıAKtarToolStripMenuItem.Click += new System.EventHandler(this.dışarıAKtarToolStripMenuItem_Click);
             // 
             // içeriAktarToolStripMenuItem
             // 
             this.içeriAktarToolStripMenuItem.Name = "içeriAktarToolStripMenuItem";
-            this.içeriAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.içeriAktarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.içeriAktarToolStripMenuItem.Text = " XML İçeri Aktar";
             this.içeriAktarToolStripMenuItem.Click += new System.EventHandler(this.içeriAktarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(162, 6);
             // 
             // jSONDışarıAktarToolStripMenuItem
             // 
             this.jSONDışarıAktarToolStripMenuItem.Name = "jSONDışarıAktarToolStripMenuItem";
-            this.jSONDışarıAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jSONDışarıAktarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.jSONDışarıAktarToolStripMenuItem.Text = "JSON Dışarı Aktar";
             this.jSONDışarıAktarToolStripMenuItem.Click += new System.EventHandler(this.jSONDışarıAktarToolStripMenuItem_Click);
             // 
             // jSONİçeriAktarToolStripMenuItem
             // 
             this.jSONİçeriAktarToolStripMenuItem.Name = "jSONİçeriAktarToolStripMenuItem";
-            this.jSONİçeriAktarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.jSONİçeriAktarToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.jSONİçeriAktarToolStripMenuItem.Text = "JSON İçeri Aktar";
             this.jSONİçeriAktarToolStripMenuItem.Click += new System.EventHandler(this.jSONİçeriAktarToolStripMenuItem_Click);
             // 
@@ -244,6 +244,7 @@ namespace KisiEnvanteri
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbResim)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
