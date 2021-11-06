@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace KisiEnvanteri
 {
-    public static class KisiContext//Static bir tane olacak. Devamlı instance amadan yapmak için.Helper metodlar genelde static tanımlanır.
+    public static class KisiContext//Static bir tane olacak. Devamlı instance almadan yapmak için.Helper metodlar genelde static tanımlanır.
     {
-        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/db.json";
+        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/NBUY/WebForm/KisiEnvanteri/db.json";
         public static List<Kisi> Kisiler { get; set; } = new List<Kisi>();
 
         public static void Load()
@@ -30,8 +30,7 @@ namespace KisiEnvanteri
                 }
                 catch (Exception ex)
                 {
-                    Debug.WriteLine(ex);
-                    
+                    Debug.WriteLine(ex);   
                 }
             }
             
