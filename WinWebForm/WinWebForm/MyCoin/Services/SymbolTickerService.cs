@@ -12,7 +12,7 @@ namespace MyCoin.Services
 {
     public class SymbolTickerService : IBinanceReq<BinanceReq24HTicker>
     {
-        public string BaseUrl => "https://api.binance.com/api/v3/exchangeInfo";
+        public string BaseUrl =>  "https://api.binance.com/api/v3/ticker/24hr";
 
         public BinanceReq24HTicker Result(string param)
         {
