@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCoin.Models
 {
-    public class BinanceReq24HTicker
+    public class BinanceReq24HTicker:BinanceBase
     {
 
         public string Symbol { get; set; }

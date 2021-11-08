@@ -8,6 +8,6 @@ namespace MyCoin.Models
 {
     public class BinanceBase
     {
-        public DateTime Tarih { get; set; }
+        public DateTime Date { get; set; } = DateTime.Now;
     }
 }

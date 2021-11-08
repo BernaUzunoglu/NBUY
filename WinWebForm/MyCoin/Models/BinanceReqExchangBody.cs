@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCoin.Models
 {
-    public class BinanceReqExchangBody
+    public class BinanceReqExchangBody:BinanceBase
     {
         public string timezone { get; set; }
         public long serverTime { get; set; }

@@ -18,15 +18,15 @@ namespace MyCoin.Services
 
         public BinanceReqExchangBody Result(string param=null)
         {
-            HttpClient client  = new HttpClient();
+            HttpClient client  = new HttpClient();//Http istekleri atabilmizi sağlamak için asenkron çalışan bir nesne oluşturuldu.(Http istekleri:GET,POST,PUT,DELETE) 
 
             try
             {
-                HttpResponseMessage result= client.GetAsync(new Uri(BaseUrl)).Result;
+                HttpResponseMessage result= client.GetAsync(new Uri(BaseUrl)).Result;//Uri: (Standart yazım)Bir URL’in altında bulunan bir kaynağın tam yoluna işaret eder.BaseUrl gibi
                 if (result.StatusCode != HttpStatusCode.OK)
                     throw new Exception($"İstek başarısız :{result.StatusCode}");
 
-                BinanceReqExchangBody body = JsonConvert.DeserializeObject<BinanceReqExchangBody>(result.Content.ReadAsStringAsync().Result);
+                BinanceReqExchangBody body = JsonConvert.DeserializeObject<BinanceReqExchangBody>(result.Content.ReadAsStringAsync().Result);// Json formatta gelen veriyi Deserialize ederek tanımlanan sınıf yapısına dönüştürüldü.
                 return body;
             }
             catch 

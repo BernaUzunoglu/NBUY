@@ -38,16 +38,16 @@ namespace MyCoin
                 MessageBox.Show($"{ex.Message}");
             }
             
-            _symbols = _symbols.Where(x => x.status == "TRADING").OrderBy(x => x.symbol).ToList();
+            _symbols = _symbols.Where(x => x.status == "TRADING").OrderBy(x => x.symbol).ToList();//Linq da yazılan sorgu sonucunda gelen verileri _symbols içerisine atadık.
             lstExchange.DataSource = _symbols;
-            lstExchange.DisplayMember = nameof(Symbol.symbol);
+            lstExchange.DisplayMember = nameof(Symbol.symbol);// NameOf ile çıktı şeklini Symbol sınıfındaki symbol şeklinde ayarladık
 
             this.Text = $"{_symbols.Count} adet Coin listelenmektedir.";
             
             Console.WriteLine();
         }
 
-        private void txtAra_TextChanged(object sender, EventArgs e)
+        private void txtAra_TextChanged(object sender, EventArgs e)//Textbox a girilen değerler için filtreleme işlemi yapıldı
         {
             if (string.IsNullOrEmpty(txtAra.Text))
                 lstExchange.DataSource = _symbols;
@@ -65,9 +65,9 @@ namespace MyCoin
         {
             if (lstExchange.SelectedItem == null) return;
 
-            _seciliSymbol = lstExchange.SelectedItem as Symbol;
+            _seciliSymbol = lstExchange.SelectedItem as Symbol;//seçilen değer Symbol tipine cast edilmiştir.
 
-            //try
+            //try   //-----------Bu alan tekrar yazılmaması için methot ile yazılmış ve aşağıda çağrılmıştır.----------
             //{
             //    var result = new SymbolTickerService().Result(_seciliSymbol.symbol);
 
@@ -91,7 +91,7 @@ namespace MyCoin
             GetCoinInfo();
         }
 
-        private void GetCoinInfo()
+        private void GetCoinInfo()// İçerik yazdırma metodu
         {
             try
             {
@@ -110,7 +110,7 @@ namespace MyCoin
             }
         }
 
-        private void lblSymbol_Click(object sender, EventArgs e)
+        private void lblSymbol_Click(object sender, EventArgs e) // Label tıklandığı anda tarayıcıda sayfayı açma işlemi
         {
             if (_seciliSymbol == null) return;
             
