@@ -16,7 +16,6 @@ namespace KisiEnvanteri
 
         public static void Load()
         {
-
             if (File.Exists(_path))
             {
                 try
@@ -26,14 +25,12 @@ namespace KisiEnvanteri
                     string dosyaIcerigi = reader.ReadToEnd();
                     Kisiler = JsonConvert.DeserializeObject<List<Kisi>>(dosyaIcerigi);
                     reader.Close();
-
                 }
                 catch (Exception ex)
                 {
                     Debug.WriteLine(ex);   
                 }
-            }
-            
+            }     
            
         }
         public static void Save()
