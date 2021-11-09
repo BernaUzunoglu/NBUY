@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun10", "Gun10", "{6C9FC7A9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCoin", "MyCoin\MyCoin.csproj", "{6C7C1C28-48E5-4FB6-A484-7529F3647E4F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gun11", "Gun11", "{36C54902-6962-4FF0-8AE0-065B347777B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm_Form", "Crm_Form\Crm_Form.csproj", "{9218271D-59DA-4CB3-9D01-A7EAA16DA634}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +21,17 @@ Global
 		{6C7C1C28-48E5-4FB6-A484-7529F3647E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C7C1C28-48E5-4FB6-A484-7529F3647E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C7C1C28-48E5-4FB6-A484-7529F3647E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9218271D-59DA-4CB3-9D01-A7EAA16DA634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9218271D-59DA-4CB3-9D01-A7EAA16DA634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9218271D-59DA-4CB3-9D01-A7EAA16DA634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9218271D-59DA-4CB3-9D01-A7EAA16DA634}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6C7C1C28-48E5-4FB6-A484-7529F3647E4F} = {6C9FC7A9-D7E4-4F92-A5D0-0B047110B8FC}
+		{9218271D-59DA-4CB3-9D01-A7EAA16DA634} = {36C54902-6962-4FF0-8AE0-065B347777B3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {ED6828E2-D337-4873-8AD3-957761FA4BBD}
