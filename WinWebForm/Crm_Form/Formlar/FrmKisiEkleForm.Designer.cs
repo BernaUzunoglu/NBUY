@@ -34,11 +34,11 @@ namespace Crm_Form.Formlar
             // 
             // btnKisiEkle
             // 
-            this.btnKisiEkle.Location = new System.Drawing.Point(334, 114);
+            this.btnKisiEkle.Location = new System.Drawing.Point(144, 80);
             this.btnKisiEkle.Name = "btnKisiEkle";
-            this.btnKisiEkle.Size = new System.Drawing.Size(75, 23);
+            this.btnKisiEkle.Size = new System.Drawing.Size(133, 58);
             this.btnKisiEkle.TabIndex = 0;
-            this.btnKisiEkle.Text = "button1";
+            this.btnKisiEkle.Text = "Kisi Ekle";
             this.btnKisiEkle.UseVisualStyleBackColor = true;
             this.btnKisiEkle.Click += new System.EventHandler(this.btnKisiEkle_Click);
             // 
@@ -46,7 +46,7 @@ namespace Crm_Form.Formlar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(467, 247);
             this.Controls.Add(this.btnKisiEkle);
             this.Name = "FrmKisiEkleForm";
             this.Text = "FrmKisiEkleForm";

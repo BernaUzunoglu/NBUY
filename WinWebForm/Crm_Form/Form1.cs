@@ -21,9 +21,9 @@ namespace Crm_Form
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            var result= MessageBox.Show("Programı kapatmak istiyormusunuz? ","Dikkat",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+            var result = MessageBox.Show("Programı kapatmak istiyormusunuz? ", "Dikkat", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if(result!= DialogResult.Yes)
+            if (result != DialogResult.Yes)
             {
                 e.Cancel = true;
             }
@@ -38,7 +38,7 @@ namespace Crm_Form
         private void dışarıAktarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Kontrollü nesne üretimi ram üzerindeki nesnenin ikinci kez üretimini engeledik.
-            if(_frmDisariAktar== null || _frmDisariAktar.IsDisposed)
+            if (_frmDisariAktar == null || _frmDisariAktar.IsDisposed)
                 _frmDisariAktar = new FrmDisariAktar();
             _frmDisariAktar.MdiParent = this;
             _frmDisariAktar.Show();
@@ -74,10 +74,31 @@ namespace Crm_Form
         private void kisiGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (_frmKisiGuncelle == null || _frmKisiGuncelle.IsDisposed)
+            {
                 _frmKisiGuncelle = new FrmKisiGuncelle();
-            _frmKisiGuncelle.Kisi = Kisiler.Last();
-            _frmKisiGuncelle.MdiParent = this;
-            _frmKisiGuncelle.Show();
+                _frmKisiGuncelle.Kisi = Kisiler.Last();
+                _frmKisiGuncelle.MdiParent = this;
+                _frmKisiGuncelle.Show();
+
+            }
+                
+        }
+
+        FrmKisiListele _frmKisiListele;
+        private void listeleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            _frmKisiListele = new FrmKisiListele();
+            // _frmKisiListele.MdiParent = this;
+            _frmKisiListele.StartPosition = FormStartPosition.CenterScreen;
+            _frmKisiListele.Kisiler = Kisiler;
+            var result = _frmKisiListele.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                var seciliKisi = _frmKisiListele.SeciliKisi;
+                MessageBox.Show($"Seçili Kişi :{seciliKisi}");
+            }
+
         }
     }
 }

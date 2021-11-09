@@ -38,6 +38,7 @@ namespace Crm_Form
             this.kisiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kişilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kisiGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listeleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,7 +95,8 @@ namespace Crm_Form
             // 
             this.kisiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.kişilerToolStripMenuItem,
-            this.kisiGüncelleToolStripMenuItem});
+            this.kisiGüncelleToolStripMenuItem,
+            this.listeleToolStripMenuItem});
             this.kisiToolStripMenuItem.Name = "kisiToolStripMenuItem";
             this.kisiToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.kisiToolStripMenuItem.Text = "Kişiler";
@@ -112,6 +114,13 @@ namespace Crm_Form
             this.kisiGüncelleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.kisiGüncelleToolStripMenuItem.Text = "Kisi Güncelle";
             this.kisiGüncelleToolStripMenuItem.Click += new System.EventHandler(this.kisiGüncelleToolStripMenuItem_Click);
+            // 
+            // listeleToolStripMenuItem
+            // 
+            this.listeleToolStripMenuItem.Name = "listeleToolStripMenuItem";
+            this.listeleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listeleToolStripMenuItem.Text = "Listele";
+            this.listeleToolStripMenuItem.Click += new System.EventHandler(this.listeleToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -144,6 +153,7 @@ namespace Crm_Form
         private System.Windows.Forms.ToolStripMenuItem kisiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kişilerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem kisiGüncelleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listeleToolStripMenuItem;
     }
 }
 

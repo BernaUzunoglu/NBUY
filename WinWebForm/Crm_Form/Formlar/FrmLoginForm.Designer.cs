@@ -29,6 +29,7 @@ namespace Crm_Form.Formlar
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLoginForm));
             this.txtKulAdi = new System.Windows.Forms.TextBox();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnGiris = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@ namespace Crm_Form.Formlar
             // 
             // txtKulAdi
             // 
-            this.txtKulAdi.Location = new System.Drawing.Point(83, 226);
+            this.txtKulAdi.Location = new System.Drawing.Point(102, 281);
             this.txtKulAdi.Name = "txtKulAdi";
             this.txtKulAdi.Size = new System.Drawing.Size(177, 23);
             this.txtKulAdi.TabIndex = 0;
@@ -46,7 +47,7 @@ namespace Crm_Form.Formlar
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(83, 278);
+            this.txtSifre.Location = new System.Drawing.Point(102, 324);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.PasswordChar = '*';
             this.txtSifre.Size = new System.Drawing.Size(177, 23);
@@ -55,7 +56,7 @@ namespace Crm_Form.Formlar
             // 
             // btnGiris
             // 
-            this.btnGiris.Location = new System.Drawing.Point(304, 262);
+            this.btnGiris.Location = new System.Drawing.Point(132, 353);
             this.btnGiris.Name = "btnGiris";
             this.btnGiris.Size = new System.Drawing.Size(95, 39);
             this.btnGiris.TabIndex = 2;
@@ -65,9 +66,11 @@ namespace Crm_Form.Formlar
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(83, 58);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(83, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(316, 146);
+            this.pictureBox1.Size = new System.Drawing.Size(209, 222);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -76,7 +79,7 @@ namespace Crm_Form.Formlar
             this.AcceptButton = this.btnGiris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(554, 393);
+            this.ClientSize = new System.Drawing.Size(404, 418);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtSifre);
