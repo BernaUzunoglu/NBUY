@@ -11,7 +11,9 @@ namespace KisiEnvanteri
 {
     public static class KisiContext//Static bir tane olacak. Devamlı instance almadan yapmak için.Helper metodlar genelde static tanımlanır.
     {
-        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/NBUY/WebForm/KisiEnvanteri/db.json";
+        //private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/NBUY/WebForm/KisiEnvanteri/db.json";
+        private static string _path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/db.json";
+
         public static List<Kisi> Kisiler { get; set; } = new List<Kisi>();
 
         public static void Load()
@@ -37,7 +39,7 @@ namespace KisiEnvanteri
         {
             try
             {
-                FileStream fileStream = new FileStream(_path, FileMode.OpenOrCreate);
+                FileStream fileStream = new FileStream(_path, FileMode.Open);
                 StreamWriter writer = new StreamWriter(fileStream);
                 writer.Write(JsonConvert.SerializeObject(Kisiler, Formatting.Indented));
                 writer.Close();
