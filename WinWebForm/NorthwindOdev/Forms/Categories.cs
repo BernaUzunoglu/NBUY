@@ -40,6 +40,8 @@ namespace NorthwindOdev.Forms
             listView1.Columns.Add("CategoryName");
             listView1.Columns.Add("Description");
             listView1.View = View.Details;
+
+
             
             foreach (Category item in liste)
             {
