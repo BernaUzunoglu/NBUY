@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace NorthwindOdev.Models
+namespace North_DbSet.Models
 {
     public partial class Category
     {
@@ -19,6 +19,4 @@ namespace NorthwindOdev.Models
 
         public virtual ICollection<Product> Products { get; set; }
     }
-
-    
 }
