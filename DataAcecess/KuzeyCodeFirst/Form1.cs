@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KuzeyCodeFirst.Data;
+using KuzeyCodeFirst.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +19,30 @@ namespace KuzeyCodeFirst
             InitializeComponent();
         }
 
+        private KuzeyContext _dbContext= new KuzeyContext();
+        private void btneEkle_Click(object sender, EventArgs e)
+        {
+            _dbContext.Kategoriler.Add(new Kategori()
+            {
+                Ad = "Kategori",
+                Aciklama ="Açıklama"
+            });
+            _dbContext.SaveChanges();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            var kategori = _dbContext.Kategoriler.First();
+            kategori.Aciklama = "Güncel açıklama";
+            _dbContext.SaveChanges();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            var kategori = _dbContext.Kategoriler.First();
+            _dbContext.Kategoriler.Remove(kategori);
+            _dbContext.SaveChanges();
+
+        }
     }
 }
