@@ -1,4 +1,5 @@
 ﻿using KuzeyCodeFirst.Models.Abstract;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -24,9 +25,12 @@ namespace KuzeyCodeFirst.Models
         
         public bool DevamEtmiyor { get; set; }
 
+        public Guid? TedarikciId { get; set; }
+
 
         [ForeignKey(nameof(KategorId))]
         public Kategori Kategori { get; set; }
         public ICollection<SiparisDetay> SiparisDetaylari { get; set; } = new HashSet<SiparisDetay>();//Navigation property
+        public Tedarikci Tedarikci { get; set;}
     }
 }
