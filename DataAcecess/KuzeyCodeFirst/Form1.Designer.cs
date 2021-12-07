@@ -31,6 +31,7 @@
             this.btneEkle = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.btnnTedarikciEkle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btneEkle
@@ -63,11 +64,22 @@
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
+            // btnnTedarikciEkle
+            // 
+            this.btnnTedarikciEkle.Location = new System.Drawing.Point(62, 233);
+            this.btnnTedarikciEkle.Name = "btnnTedarikciEkle";
+            this.btnnTedarikciEkle.Size = new System.Drawing.Size(156, 80);
+            this.btnnTedarikciEkle.TabIndex = 3;
+            this.btnnTedarikciEkle.Text = "Tedarikci Ekle";
+            this.btnnTedarikciEkle.UseVisualStyleBackColor = true;
+            this.btnnTedarikciEkle.Click += new System.EventHandler(this.btnnTedarikciEkle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnnTedarikciEkle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btneEkle);
@@ -82,5 +94,6 @@
         private System.Windows.Forms.Button btneEkle;
         private System.Windows.Forms.Button btnGuncelle;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Button btnnTedarikciEkle;
     }
 }

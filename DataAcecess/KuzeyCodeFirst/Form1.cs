@@ -1,5 +1,6 @@
 ﻿using KuzeyCodeFirst.Data;
 using KuzeyCodeFirst.Models;
+using KuzeyCodeFirst.Repository;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,14 +21,25 @@ namespace KuzeyCodeFirst
         }
 
         private KuzeyContext _dbContext= new KuzeyContext();
+        private KategoriRepo _kategoriRepo= new KategoriRepo();
+        private SiparisRepo _siparisRepo= new SiparisRepo();
+        
         private void btneEkle_Click(object sender, EventArgs e)
         {
-            _dbContext.Kategoriler.Add(new Kategori()
+            //_dbContext.Kategoriler.Add(new Kategori()
+            //{
+            //    Ad = "Kategori",
+            //    Aciklama ="Açıklama"
+            //});
+            //_dbContext.SaveChanges();
+
+            var kategori= new Kategori()
             {
                 Ad = "Kategori",
-                Aciklama ="Açıklama"
-            });
-            _dbContext.SaveChanges();
+                Aciklama = "Açıklama"
+            };
+            _kategoriRepo.Add(kategori);
+
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
@@ -42,6 +54,11 @@ namespace KuzeyCodeFirst
             var kategori = _dbContext.Kategoriler.First();
             _dbContext.Kategoriler.Remove(kategori);
             _dbContext.SaveChanges();
+
+        }
+
+        private void btnnTedarikciEkle_Click(object sender, EventArgs e)
+        {
 
         }
     }
