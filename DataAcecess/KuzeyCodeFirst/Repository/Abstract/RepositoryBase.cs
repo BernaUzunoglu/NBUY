@@ -11,6 +11,7 @@ namespace KuzeyCodeFirst.Repository
 {
     public abstract class RepositoryBase<T, TId> : IRepository<T, TId> where T : BaseEntity, new()// new() default ctor ile çalış
     {
+        public DbSet<T> Table { get; protected set; }
         public RepositoryBase()
         {
             _context = new KuzeyContext();
@@ -19,7 +20,7 @@ namespace KuzeyCodeFirst.Repository
 
 
         protected KuzeyContext _context;
-        public DbSet<T> Table { get; protected set; }
+        
         public virtual void Add(T entity, bool isSaveLater = false)
         {
           Table.Add(entity);

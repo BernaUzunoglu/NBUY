@@ -52,7 +52,8 @@ namespace KuzeyCodeFirst
         private void btnSil_Click(object sender, EventArgs e)
         {
             var kategori = _dbContext.Kategoriler.First();
-            _dbContext.Kategoriler.Remove(kategori);
+            _kategoriRepo.Remove(kategori);
+            //_dbContext.Kategoriler.Remove(kategori);
             _dbContext.SaveChanges();
 
         }
